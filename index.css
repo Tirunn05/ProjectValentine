@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    background-color: #f0f0f0;
+}
+
+.left-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+.emoji {
+    position: fixed;
+    top: -10%;
+    animation: fall 4s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        top: 110%;
+        transform: rotate(var(--rot));
+    }
+}
