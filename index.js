@@ -18,7 +18,7 @@ function accept() {
     document.getElementById("refuse-btn").disabled = true;
     document.getElementById("accept-btn").disabled = true;
     
-    const emojis = ["💘", "😘", "😍", "🤗", "💦"]; // Liste d'émojis possibles
+    const emojis = ["💘", "😘", "😍", "🤗"]; // Liste d'émojis possibles
     const spawnInterval = 100; // ms entre chaque apparition
 
     function createEmoji() {
