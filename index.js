@@ -3,10 +3,14 @@ window.onload = () => {
 
     btn.addEventListener("mouseenter", () => {
         btn.style.opacity = "0";
+        btn.style.cursor = "not-allowed";
+        imageSlider();
     });
 
     btn.addEventListener("mouseleave", () => {
         btn.style.opacity = "1";
+        btn.style.cursor = "default";
+        document.getElementById("slidingImage").classList.toggle("show");
     });
 };
 
@@ -43,4 +47,19 @@ function accept() {
     // Génération continue
     setInterval(createEmoji, spawnInterval);
 
+}
+
+function imageSlider() {
+
+    const img = document.getElementById("slidingImage");
+
+    // Delay to allow CSS transition to apply
+    setTimeout(() => {
+        img.classList.add("show");
+    }, 300);
+
+    // Optional: click to hide/show again
+    img.addEventListener("click", () => {
+        img.classList.toggle("show");
+    });
 }

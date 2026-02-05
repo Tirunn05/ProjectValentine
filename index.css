@@ -21,6 +21,22 @@ body {
     pointer-events: none;
 }
 
+#slidingImage {
+        position: absolute;
+        bottom: -200px; /* Start off-screen */
+        right: -200px;  /* Start off-screen */
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: transform 1s ease-out;
+    }
+
+    /* Final position in the corner */
+    #slidingImage.show {
+        transform: translate(-200px, -200px);
+    }
+
 @keyframes fall {
     to {
         top: 110%;
